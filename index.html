@@ -1,98 +1,335 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mate DIDIa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>MATE DIDIA | Selected Works</title>
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
 
-    <nav>
-        <div class="container nav-container">
-            <div class="logo" data-aos="fade-down">Mate Didida.</div>
-            <ul class="nav-links" data-aos="fade-down" data-aos-delay="200">
-                <li><a href="#hero">მთავარი</a></li>
-                <li><a href="#portfolio">ნამუშევრები</a></li>
-                <li><a href="#contact">კონტაქტი</a></li>
-                <li><a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" target="_blank" class="btn-highlight">Behance</a></li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="brand">MATE DIDIA.</a>
+        <div class="menu-items">
+            <a href="#work">Index</a>
+            <a href="#about">Info</a>
+            <a href="mailto:matedidia@gmail.com" class="button-contact">Let's Talk</a>
         </div>
     </nav>
 
-    <section id="hero">
-        <div class="container hero-content">
-            <h1 data-aos="fade-up">ვიზუალური ისტორიების <br> <span class="accent-text">შემქმნელი.</span></h1>
-            <p data-aos="fade-up" data-aos-delay="300">
-               მე ვარ ბრენდ დიზაინერი, რომელიც ქმნის დასამახსოვრებელ იდენტობას და ციფრულ გამოცდილებას. ფოკუსირებული ვარ სუფთა ესთეტიკასა და ფუნქციონალზე.
-            </p>
-            <a href="#portfolio" class="btn-primary" data-aos="zoom-in" data-aos-delay="500">ნამუშევრების ნახვა</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main data-scroll-container>
 
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-right">რჩეული პროექტები</h2>
-            
-            <div class="portfolio-grid">
-                <a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" target="_blank" class="portfolio-item portfolio-featured" data-aos="fade-up">
-                    <div class="image-overlay">
-                        <img src="betterhelp-cover.jpg" alt="BetterHelp Rebrand">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>BetterHelp Redesign</h3>
-                        <p>სრული ბრენდინგი და ვიზუალური იდენტობა წამყვანი მენტალური ჯანმრთელობის პლატფორმისთვის.</p>
-                        <span class="view-project">სრულად ნახვა →</span>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="image-overlay">
-                        <img src="project2.jpg" alt="Project Two">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Fashion Brand Logo</h3>
-                        <p>ლოგოს დიზაინი და შეფუთვა.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="image-overlay">
-                        <img src="project3.jpg" alt="Project Three">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>App UI Design</h3>
-                        <p>მობილური აპლიკაციის ინტერფეისი.</p>
-                    </div>
-                </a>
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="hero-container">
+                <div class="hero-row">
+                    <h1>CREATIVE</h1>
+                </div>
+                <div class="hero-row">
+                    <h1>DEVELOPER</h1>
+                </div>
+                <div class="hero-row">
+                    <h1 class="italic">& DESIGNER</h1>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-down">
+                <span>(SCROLL)</span>
+            </div>
+        </header>
 
-    <section id="contact" data-aos="zoom-in-up">
-        <div class="container contact-content">
-            <h2>მზად ხართ თანამშრომლობისთვის?</h2>
-            <p>მოდით შევქმნათ რაღაც განსაკუთრებული ერთად.</p>
-            <a href="mailto:matedidida@gmail.com" class="btn-primary btn-large">მომწერეთ მეილზე</a>
-        </div>
-    </section>
+        <!-- Project List Section (The "List Hover" Style) -->
+        <section id="work" class="work-list-section">
+            <div class="list-header">
+                <span>PROJECT</span>
+                <span>CATEGORY</span>
+                <span>YEAR</span>
+            </div>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 შექმნილია სიყვარულით.</p>
-        </div>
-    </footer>
+            <ul class="project-list">
+                <!-- Project 1: BetterHelp (Multi-Image) -->
+                <li class="project-item"
+                    data-images='["etterhelp-cover.jpg", "etterhelp-cover2.jpg", "etterhelp-cover3.jpg", "etterhelp-cover4.jpg", "etterhelp-cover5.jpg"]'>
+                    <div class="project-row">
+                        <a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign"
+                            target="_blank" class="project-link">
+                            <span class="p-name">BetterHelp</span>
+                            <span class="p-cat">Branding / UI</span>
+                            <span class="p-year">2025</span>
+                        </a>
+                        <!-- Dots Navigation -->
+                        <div class="project-dots">
+                            <button class="dot" data-index="0"></button>
+                            <button class="dot" data-index="1"></button>
+                            <button class="dot" data-index="2"></button>
+                            <button class="dot" data-index="3"></button>
+                            <button class="dot" data-index="4"></button>
+                        </div>
+                    </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                    <!-- Hover Reveal Image Container (Floating) -->
+                    <div class="hover-reveal">
+                        <img src="etterhelp-cover.jpg" alt="BetterHelp Preview">
+                    </div>
+
+                    <!-- Expanded View (Accordion) -->
+                    <div class="expanded-view">
+                        <div class="expanded-image-container">
+                            <img src="" alt="Expanded View">
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Project 2 (Standard for now, re-using logic if needed) -->
+                <li class="project-item"
+                    data-images='["project2.jpg", "project2.jpg", "project2.jpg", "project2.jpg", "project2.jpg"]'>
+                    <div class="project-row">
+                        <a href="#" class="project-link">
+                            <span class="p-name">Fashion Mode</span>
+                            <span class="p-cat">Art Direction</span>
+                            <span class="p-year">2024</span>
+                        </a>
+                        <div class="project-dots">
+                            <button class="dot" data-index="0"></button>
+                            <button class="dot" data-index="1"></button>
+                            <button class="dot" data-index="2"></button>
+                            <button class="dot" data-index="3"></button>
+                            <button class="dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="hover-reveal">
+                        <img src="project2.jpg" alt="Fashion Mode">
+                    </div>
+                    <div class="expanded-view">
+                        <div class="expanded-image-container">
+                            <img src="" alt="Expanded View">
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Project 3 -->
+                <li class="project-item"
+                    data-images='["project2.jpg", "project2.jpg", "project2.jpg", "project2.jpg", "project2.jpg"]'>
+                    <div class="project-row">
+                        <a href="#" class="project-link">
+                            <span class="p-name">Neon Tech</span>
+                            <span class="p-cat">Web Design</span>
+                            <span class="p-year">2024</span>
+                        </a>
+                        <div class="project-dots">
+                            <button class="dot" data-index="0"></button>
+                            <button class="dot" data-index="1"></button>
+                            <button class="dot" data-index="2"></button>
+                            <button class="dot" data-index="3"></button>
+                            <button class="dot" data-index="4"></button>
+                        </div>
+                    </div>
+                    <div class="hover-reveal">
+                        <img src="project2.jpg" alt="Neon">
+                    </div>
+                    <div class="expanded-view">
+                        <div class="expanded-image-container">
+                            <img src="" alt="Expanded View">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- About / Marquee Section -->
+        <section class="marquee-section">
+            <div class="marquee-content">
+                <span>MATE DIDIA — AVAILABLE FOR FREELANCE — MATE DIDIA — AVAILABLE FOR FREELANCE — </span>
+                <span>MATE DIDIA — AVAILABLE FOR FREELANCE — MATE DIDIA — AVAILABLE FOR FREELANCE — </span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="about">
+            <div class="footer-container">
+                <p class="footer-text">Have an idea?</p>
+                <a href="mailto:matedidia@gmail.com" class="email-link">matedidia@gmail.com</a>
+
+                <div class="footer-bottom">
+                    <div class="socials">
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                    <p class="copyright">© 2026 Mate Didia.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-        // ანიმაციების გააქტიურება
-        AOS.init({
-            duration: 1000, // ანიმაციის ხანგრძლივობა (1 წამი)
-            once: true // ანიმაცია მოხდეს მხოლოდ ერთხელ ჩამოსქროლვისას
+        // --- MULTI-IMAGE SCRUB & DOTS LOGIC ---
+        const projectItems = document.querySelectorAll('.project-item');
+
+        projectItems.forEach(item => {
+            const row = item.querySelector('.project-row');
+            const link = item.querySelector('.project-link');
+            const imgContainer = item.querySelector('.hover-reveal');
+            const img = imgContainer.querySelector('img');
+            const dots = item.querySelectorAll('.dot');
+            const expandedView = item.querySelector('.expanded-view');
+            const expandedImg = expandedView.querySelector('img');
+
+            // Parse images
+            const images = JSON.parse(item.dataset.images);
+
+            // Reusable Toggle Function
+            const toggleImage = (index) => {
+                const selectedImage = images[index];
+                const currentSrc = expandedImg.getAttribute('src');
+
+                if (expandedView.classList.contains('open') && currentSrc && currentSrc.includes(selectedImage)) {
+                    // Close if already open with same image
+                    slideUp(expandedView);
+                    expandedView.classList.remove('open');
+                } else {
+                    // Open or Switch
+                    expandedImg.src = selectedImage;
+                    if (!expandedView.classList.contains('open')) {
+                        slideDown(expandedView);
+                        expandedView.classList.add('open');
+                    }
+                }
+
+                // Active Dot State
+                dots.forEach(d => d.classList.remove('active'));
+                if (dots[index]) dots[index].classList.add('active');
+            };
+
+            // --- 1. HOVER scrubbing ---
+            // Force initial centered state for GSAP Reveal
+            gsap.set(imgContainer, { xPercent: -50, yPercent: -50 });
+
+            row.addEventListener('mouseenter', () => {
+                gsap.to(imgContainer, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" });
+            });
+
+            row.addEventListener('mouseleave', () => {
+                gsap.to(imgContainer, { opacity: 0, scale: 0.8, duration: 0.3, ease: "power2.out" });
+            });
+
+            row.addEventListener('mousemove', (e) => {
+                // Floating Follow
+                gsap.to(imgContainer, {
+                    x: e.clientX,
+                    y: e.clientY,
+                    duration: 0.1,
+                    ease: "none"
+                });
+
+                // Image Scrubbing logic
+                const rect = row.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const width = rect.width;
+                const percentage = Math.max(0, Math.min(1, mouseX / width));
+                const index = Math.floor(percentage * images.length);
+                const safeIndex = Math.min(index, images.length - 1);
+
+                // Update Preview Image
+                if (!img.src.includes(images[safeIndex])) {
+                    img.src = images[safeIndex];
+                }
+
+                // Update dots visual (preview only)
+                dots.forEach((dot, i) => {
+                    dot.style.opacity = (i === safeIndex) ? '1' : '0.3';
+                });
+            });
+
+            // --- 2. CLICK logic (Row & Dots) ---
+
+            // Row Click (Clicking the "image")
+            row.addEventListener('click', (e) => {
+                // Calculate index at moment of click
+                const rect = row.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const width = rect.width;
+                const percentage = Math.max(0, Math.min(1, mouseX / width));
+                const index = Math.floor(percentage * images.length);
+                const safeIndex = Math.min(index, images.length - 1);
+
+                toggleImage(safeIndex);
+            });
+
+            // Dots Click
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Stop row click
+                    toggleImage(index);
+                });
+            });
         });
+
+        // Helper functions for slide animation
+        function slideDown(element) {
+            element.style.display = 'block';
+            element.style.height = '0px';
+            const height = element.scrollHeight + "px";
+            gsap.to(element, { height: height, duration: 0.5, ease: "power2.out" });
+        }
+
+        function slideUp(element) {
+            gsap.to(element, {
+                height: 0, duration: 0.5, ease: "power2.out", onComplete: () => {
+                    element.style.display = 'none';
+                }
+            });
+        }
+
+        // --- MARQUEE ANIMATION ---
+        gsap.to(".marquee-content", {
+            x: "-50%",
+            duration: 20,
+            repeat: -1,
+            ease: "linear"
+        });
+
+        // --- HERO ANIMATION (SKEW & PARALLAX) ---
+        const heroTl = gsap.timeline();
+
+        // Initial Reveal
+        heroTl.from(".hero-row h1", {
+            yPercent: 120, // Move down fully
+            skewY: 10,     // Skew effect
+            duration: 1.5,
+            stagger: 0.1,
+            ease: "power4.out"
+        });
+
+        // Mouse Parallax Effect
+        const heroSection = document.querySelector('.hero-section');
+        const heroRows = document.querySelectorAll('.hero-row h1');
+
+        heroSection.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+            // Move rows slightly differently for depth
+            gsap.to(heroRows[0], { x: x * 20, y: y * 10, duration: 1, ease: 'power2.out' });
+            gsap.to(heroRows[1], { x: x * -30, y: y * -15, duration: 1, ease: 'power2.out' }); // Moves opposite
+            gsap.to(heroRows[2], { x: x * 20, y: y * 10, duration: 1, ease: 'power2.out' });
+        });
+
+        // Reset on leave
+        heroSection.addEventListener('mouseleave', () => {
+            gsap.to(heroRows, { x: 0, y: 0, duration: 1, ease: 'power2.out' });
+        });
+
     </script>
 </body>
+
 </html>
