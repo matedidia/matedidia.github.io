@@ -3,187 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Identity Portfolio</title>
-    <style>
-        /* --- CSS დიზაინი --- */
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --accent-color: #316d57; /* BetterHelp-ის მწვანე ფერი */
-            --gray: #888;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* კონტეინერი, რომ გვერდებზე ცარიელი ადგილი დარჩეს */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* --- ჰედერი --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 0;
-        }
-
-        .logo {
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            margin-left: 20px;
-            font-size: 0.9rem;
-            border-bottom: 1px solid transparent;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            border-bottom: 1px solid var(--text-color);
-        }
-
-        /* --- HERO სექცია --- */
-        .hero {
-            padding: 100px 0;
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 300; /* წვრილი შრიფტი უფრო ელეგანტურია */
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 500px;
-        }
-
-        /* --- პროექტების გალერეა --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 60px;
-            padding-bottom: 100px;
-        }
-
-        .project-card {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px); /* ეფექტი მაუსის მიტანისას */
-        }
-
-        .image-container {
-            width: 100%;
-            height: 500px; /* ფიქსირებული სიმაღლე სურათისთვის */
-            background-color: #f4f4f4;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* სურათი კარგად ჩაჯდება ჩარჩოში */
-        }
-
-        .project-info h2 {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        .project-info span {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-top: 5px;
-            display: block;
-        }
-
-        /* --- ფუტერი --- */
-        footer {
-            border-top: 1px solid #eee;
-            padding: 40px 0;
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
-        /* მობილური ვერსია */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .image-container { height: 300px; }
-        }
-    </style>
+    <title>Mate DIDIa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <div class="logo">[Mate Didia]</div>
-            <nav class="social-links">
-                <a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" target="_blank">Behance</a>
-                <a href="mailto:matedidia@gmail.com">Contact</a>
-            </nav>
-        </header>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo" data-aos="fade-down">Mate Didida.</div>
+            <ul class="nav-links" data-aos="fade-down" data-aos-delay="200">
+                <li><a href="#hero">მთავარი</a></li>
+                <li><a href="#portfolio">ნამუშევრები</a></li>
+                <li><a href="#contact">კონტაქტი</a></li>
+                <li><a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" target="_blank" class="btn-highlight">Behance</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="hero">
-            <h1>Brand Identity & <br> Visual Designer.</h1>
-            <p>მე ვქმნი ვიზუალურ სისტემებს, რომლებიც ბრენდებს ეხმარებათ საკუთარი ამბის თხრობაში. ფოკუსირებული ვარ სუფთა და აზრიან დიზაინზე.</p>
-        </section>
+    <section id="hero">
+        <div class="container hero-content">
+            <h1 data-aos="fade-up">ვიზუალური ისტორიების <br> <span class="accent-text">შემქმნელი.</span></h1>
+            <p data-aos="fade-up" data-aos-delay="300">
+               მე ვარ ბრენდ დიზაინერი, რომელიც ქმნის დასამახსოვრებელ იდენტობას და ციფრულ გამოცდილებას. ფოკუსირებული ვარ სუფთა ესთეტიკასა და ფუნქციონალზე.
+            </p>
+            <a href="#portfolio" class="btn-primary" data-aos="zoom-in" data-aos-delay="500">ნამუშევრების ნახვა</a>
+        </div>
+    </section>
 
-        <section class="projects-grid">
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">რჩეული პროექტები</h2>
             
-            <a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" class="project-card" target="_blank">
-                <div class="image-container">
-                    <img src="betterhelp.jpg" alt="BetterHelp Rebrand">
-                </div>
-                <div class="project-info">
-                    <h2>BetterHelp Redesign</h2>
-                    <span>Brand Identity / UI / UX</span>
-                </div>
-            </a>
+            <div class="portfolio-grid">
+                <a href="https://www.behance.net/gallery/236527175/BetterHelp-Brand-Identity-Redesign" target="_blank" class="portfolio-item portfolio-featured" data-aos="fade-up">
+                    <div class="image-overlay">
+                        <img src="betterhelp-cover.jpg" alt="BetterHelp Rebrand">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>BetterHelp Redesign</h3>
+                        <p>სრული ბრენდინგი და ვიზუალური იდენტობა წამყვანი მენტალური ჯანმრთელობის პლატფორმისთვის.</p>
+                        <span class="view-project">სრულად ნახვა →</span>
+                    </div>
+                </a>
 
-            <a href="#" class="project-card">
-                <div class="image-container">
-                    <img src="project2.jpg" alt="Another Project">
-                </div>
-                <div class="project-info">
-                    <h2>Project Name Two</h2>
-                    <span>Packaging Design</span>
-                </div>
-            </a>
+                <a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="image-overlay">
+                        <img src="project2.jpg" alt="Project Two">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fashion Brand Logo</h3>
+                        <p>ლოგოს დიზაინი და შეფუთვა.</p>
+                    </div>
+                </a>
 
-        </section>
+                <a href="#" class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="image-overlay">
+                        <img src="project3.jpg" alt="Project Three">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>App UI Design</h3>
+                        <p>მობილური აპლიკაციის ინტერფეისი.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            © 2026 Design Portfolio. Hosted on GitHub.
-        </footer>
-    </div>
+    <section id="contact" data-aos="zoom-in-up">
+        <div class="container contact-content">
+            <h2>მზად ხართ თანამშრომლობისთვის?</h2>
+            <p>მოდით შევქმნათ რაღაც განსაკუთრებული ერთად.</p>
+            <a href="mailto:matedidida@gmail.com" class="btn-primary btn-large">მომწერეთ მეილზე</a>
+        </div>
+    </section>
 
+    <footer>
+        <div class="container">
+            <p>© 2026 შექმნილია სიყვარულით.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // ანიმაციების გააქტიურება
+        AOS.init({
+            duration: 1000, // ანიმაციის ხანგრძლივობა (1 წამი)
+            once: true // ანიმაცია მოხდეს მხოლოდ ერთხელ ჩამოსქროლვისას
+        });
+    </script>
 </body>
 </html>
