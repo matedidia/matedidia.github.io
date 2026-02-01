@@ -1,12 +1,10 @@
-/* --- გლობალური ცვლადები და რესეტი --- */
+/* --- STYLE: SWISS MINIMALIST --- */
 :root {
-    --bg-dark: #0f0f0f;
-    --bg-secondary: #1a1a1a;
-    --text-light: #ffffff;
-    --text-gray: #a0a0a0;
-    /* BetterHelp-ის მწვანე ფერი აქცენტისთვის */
-    --accent: #316d57; 
-    --accent-hover: #429476;
+    --bg-color: #F5F5F3;
+    --text-color: #1A1A1A;
+    --accent-color: #2D2D2D;
+    --border-color: #D1D1D1;
+    --font-main: 'General Sans', sans-serif;
 }
 
 * {
@@ -15,271 +13,432 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth; /* რბილი სქროლი ლინკებზე დაჭერისას */
-}
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
     overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    cursor: default;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: 0.3s;
 }
 
-/* --- ღილაკები --- */
-.btn-primary {
-    display: inline-block;
-    background-color: var(--accent);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-top: 20px;
-    border: 2px solid var(--accent);
+li {
+    list-style: none;
 }
 
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--accent);
-    transform: translateY(-3px);
-}
-
-.btn-large {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-}
-
-/* --- ნავიგაცია --- */
-nav {
-    padding: 20px 0;
+/* --- NAVBAR --- */
+.navbar {
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 100;
-    background: rgba(15, 15, 15, 0.9); /* გამჭვირვალე ფონი */
-    backdrop-filter: blur(10px); /* დაბლარვის ეფექტი */
-    border-bottom: 1px solid #222;
-}
-
-.nav-container {
+    width: 100%;
+    padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
+    mix-blend-mode: normal;
+    background: transparent;
 }
 
-.logo {
+.brand {
     font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-gray);
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-.btn-highlight {
-    background-color: rgba(255,255,255,0.1);
-    padding: 8px 20px;
-    border-radius: 30px;
-    color: white !important;
-}
-
-.btn-highlight:hover {
-    background-color: var(--accent) !important;
-}
-
-/* --- Hero სექცია --- */
-#hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.accent-text {
-    color: var(--accent);
-    /* გრადიენტული ტექსტის ეფექტი */
-    background: linear-gradient(45deg, var(--accent), #4facfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-content p {
     font-size: 1.2rem;
-    color: var(--text-gray);
-    max-width: 600px;
-    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 
-/* --- პორტფოლიო სექცია --- */
-#portfolio {
-    padding: 100px 0;
-    background-color: var(--bg-secondary);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    border-left: 5px solid var(--accent);
-    padding-left: 20px;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+.menu-items {
+    display: flex;
     gap: 30px;
+    align-items: center;
 }
 
-/* მთავარი პროექტი იკავებს 2 სვეტს დიდ ეკრანზე */
-.portfolio-featured {
-    grid-column: span 2;
+.menu-items a {
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
-.portfolio-item {
-    background-color: var(--bg-dark);
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    border: 1px solid #222;
-}
-
-.image-overlay {
-    height: 300px;
-    overflow: hidden;
-}
-
-.portfolio-featured .image-overlay {
-    height: 450px; /* უფრო დიდი სურათი მთავარი პროექტისთვის */
-}
-
-.image-overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-/* ჰოვერ ეფექტი: სურათი ზუმდება, ტექსტი ფერადდება */
-.portfolio-item:hover img {
-    transform: scale(1.1);
-}
-
-.portfolio-item:hover .portfolio-info h3 {
-    color: var(--accent);
-}
-
-.portfolio-item:hover .view-project {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.portfolio-info {
-    padding: 25px;
-}
-
-.portfolio-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+.button-contact {
+    border: 1px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 50px;
     transition: 0.3s;
 }
 
-.portfolio-info p {
-    color: var(--text-gray);
-    font-size: 0.95rem;
+.button-contact:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
 }
 
-.view-project {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent);
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    perspective: 1000px;
+    /* For 3D skews */
+}
+
+.hero-row {
+    overflow: hidden;
+    /* Essential for the reveal */
+    margin: -1.5vw 0;
+    /* Tighten up the leading */
+}
+
+.hero-row h1 {
+    font-size: 13vw;
+    /* Massive */
+    line-height: 1;
+    text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: -0.04em;
+    margin: 0;
+    transform-origin: bottom left;
+    transition: color 0.3s;
+}
+
+/* Specific Styles per line */
+.hero-row:nth-child(2) h1 {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-row:nth-child(2) h1:hover {
+    color: var(--text-color);
+}
+
+.italic {
+    font-family: 'General Sans', sans-serif;
+    /* Ensure same font family but italic */
+    font-style: italic;
+    font-weight: 500 !important;
+    color: var(--text-color);
+}
+
+/* Scroll indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
     font-size: 0.9rem;
-    opacity: 0; /* თავიდან დამალულია */
-    transform: translateX(-20px); /* მარცხნივაა გაწეული */
-    transition: all 0.3s ease;
+    font-weight: 600;
+    overflow: hidden;
 }
 
-/* --- კონტაქტი და ფუტერი --- */
-#contact {
-    padding: 120px 0;
-    text-align: center;
-    background: linear-gradient(45deg, var(--bg-dark), #151515);
+.scroll-down span {
+    display: block;
+    animation: bounce 2s infinite;
 }
 
-#contact h2 {
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* --- PROJECT LIST --- */
+.work-list-section {
+    padding: 100px 0;
+}
+
+.list-header {
+    display: flex;
+    padding: 0 50px 20px 50px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.list-header span {
+    flex: 1;
+}
+
+.list-header span:first-child {
+    flex: 2;
+}
+
+/* PROJECT ROW LAYOUT */
+.project-item {
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.project-row {
+    position: relative;
+    /* Container for scrubbing */
+    display: flex;
+    width: 100%;
+    padding: 60px 40px;
+    /* Reduced side padding slightly to fit dots */
+    align-items: center;
+    cursor: crosshair;
+    /* Hint for dragging/scrubbing */
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.project-row:hover {
+    background-color: #fff;
+}
+
+.project-link {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    /* Let the row grab the hover for scrubbing */
+}
+
+/* We need pointer events on dots though */
+.project-dots {
+    display: flex;
+    gap: 8px;
+    margin-left: 20px;
+    z-index: 10;
+    pointer-events: auto;
+    /* Enable clicking */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--text-color);
+    border: none;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+
+.dot:hover,
+.dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.p-name {
+    flex: 2;
+    font-size: 4vw;
+    font-weight: 500;
+    transition: 0.3s;
+    pointer-events: auto;
+    /* Allow link click if needed */
+}
+
+.p-cat,
+.p-year {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* HOVER REVEAL - FLOATING */
+.hover-reveal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 50;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000;
+}
+
+.hover-reveal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* EXPANDED VIEW (Accordion) */
+.expanded-view {
+    height: 0;
+    overflow: hidden;
+    display: none;
+    background: #fff;
+    width: 100%;
+}
+
+.expanded-image-container {
+    padding: 40px 50px;
+    width: 100%;
+}
+
+.expanded-image-container img {
+    width: 100%;
+    max-height: 80vh;
+    /* Don't be too restricted, but allow seeing it all */
+    object-fit: contain;
+    /* Or cover depending on pref */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* --- MARQUEE --- */
+.marquee-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    background: var(--text-color);
+    color: var(--bg-color);
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
     font-size: 3rem;
-    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-#contact p {
-    color: var(--text-gray);
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-}
-
+/* --- FOOTER --- */
 footer {
-    padding: 30px 0;
-    text-align: center;
-    border-top: 1px solid #222;
-    color: var(--text-gray);
-    font-size: 0.9rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    background-color: var(--bg-color);
 }
 
-/* --- მობილური ვერსიის შესწორებები --- */
+.footer-container {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.email-link {
+    display: block;
+    font-size: 8vw;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 80px;
+    transition: 0.3s;
+}
+
+.email-link:hover {
+    color: #555;
+    transform: scale(0.98);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* მობილურზე მენიუს ვმალავთ დროებით */
+    .navbar {
+        padding: 20px;
     }
-    
-    .hero-content h1 {
-        font-size: 2.8rem;
+
+    .hero-section {
+        padding: 0 20px;
     }
-    
-    .portfolio-featured {
-        grid-column: span 1; /* მობილურზე ყველა პროექტი 1 სვეტში */
+
+    .hero-section h1 {
+        font-size: 15vw;
     }
-    
-    .portfolio-featured .image-overlay {
-        height: 300px;
+
+    .list-header {
+        display: none;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 40px 20px;
+    }
+
+    .project-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .p-name {
+        font-size: 2rem;
+    }
+
+    .p-cat,
+    .p-year {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .project-dots {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Mobile: Show static image, no hover floating */
+    .hover-reveal {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        margin-top: 20px;
+        box-shadow: none;
+        border: none;
+        left: auto;
+        top: auto;
+    }
+
+    .email-link {
+        font-size: 11vw;
+        margin-bottom: 40px;
+        word-break: break-all;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
     }
 }
